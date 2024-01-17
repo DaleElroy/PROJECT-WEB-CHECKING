@@ -47,10 +47,64 @@
                             <a href="{{ route('register') }}" class="nav-link text-white">Sign Up</a>
                         @endif
                     </li>
-                </ul>
+                </ul>vvvvv
             </div>
         </div>
     </nav>
+
+    <div class="container mt-4">
+        <div class="border p-4">
+            <h2 class="mb-4 text-center">Latest Products</h2>
+    
+            <div class="row">
+    
+                <!-- Latest Product -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="/img/design1.jpg" class="card-img-top" alt="Latest Product">
+                        <div class="card-body">
+                            <h5 class="card-title">Latest Product Name</h5>
+                            <p class="card-text">Price: $99.99</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Other Products -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="/img/design2.jpg" class="card-img-top" alt="Product 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Product 1 Name</h5>
+                            <p class="card-text">Price: $49.99</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="/img/design3.jpg" class="card-img-top" alt="Product 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Product 2 Name</h5>
+                            <p class="card-text">Price: $39.99</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="/img/design6.jpg" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Product 3 Name</h5>
+                            <p class="card-text">Price: Pesos59.99</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Add more products as needed -->
+    
+            </div>
+        </div>
+    </div>
     
     
     <div class="container mt-6">
@@ -94,6 +148,7 @@
                             <!--<a class="btn btn-primary" href="#"></a> -->
                         </div>
                     </div>
+
                     
                     
                     
