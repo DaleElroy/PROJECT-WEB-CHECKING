@@ -47,7 +47,7 @@
                             <a href="{{ route('register') }}" class="nav-link text-white">Sign Up</a>
                         @endif
                     </li>
-                </ul>vvvvv
+                </ul>
             </div>
         </div>
     </nav>
@@ -55,7 +55,6 @@
     <div class="container mt-4">
         <div class="border p-4">
             <h2 class="mb-4 text-center">Latest Products</h2>
-    
             <div class="row">
     
                 <!-- Latest Product -->
