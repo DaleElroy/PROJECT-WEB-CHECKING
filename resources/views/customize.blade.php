@@ -12,52 +12,6 @@
 </head>
 
 <body>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
-        }
-
-        #bead-container {
-            border: 2px solid #333;
-            padding: 10px;
-            margin-bottom: 20px;
-            display: inline-block;
-        }
-
-        .bead {
-            width: 20px;
-            height: 20px;
-            background-color: #3498db;
-            border: 1px solid #2980b9;
-            border-radius: 50%;
-            margin: 5px;
-            display: inline-block;
-            cursor: pointer;
-        }
-
-        #string-container {
-            border: 2px solid #333;
-            height: 50px;
-            margin-bottom: 20px;
-            overflow: hidden;
-        }
-
-        .bead-string {
-            width: 20px;
-            height: 20px;
-            background-color: #3498db;
-            border: 1px solid #2980b9;
-            border-radius: 50%;
-            margin: 5px;
-            display: inline-block;
-            transition: transform 0.3s ease;
-            /* Add a smooth transition effect */
-        }
-    </style>
-    </head>
-
     <body>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top">
             <div class="container">
@@ -113,21 +67,7 @@
                 </div>
             </div>
         </nav>
-
-        <div id="bead-container">
-            <!-- Buttons to add beads -->
-            <button onclick="addBead()">Add Bead</button>
-            <button onclick="removeBead()">Remove Bead</button>
-            <button onclick="resetString()">Reset String</button>
-
-            <!-- Beads Container -->
-            <div id="beads"></div>
-        </div>
-
-        <!-- String Container -->
-        <div id="string-container">
-            <div id="string"></div>
-        </div>
     </body>
-
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </html>
