@@ -1,6 +1,6 @@
 /* NavBar*/
 body{
-    font-style:italic;
+    font-family: 'Times New Roman', Times, serif;
     
 
 }
@@ -146,6 +146,7 @@ a:hover {
         transition: box-shadow 0.3s ease;
         margin-bottom: 20px; 
     }
+    
 
     .cards img {
         
@@ -153,10 +154,7 @@ a:hover {
         height: auto;
     }
 
-    .cards .card-body {
-        padding: 10px;
-    }
-
+  
     .cards .card-title {
         font-size: 1rem;
         margin-bottom: 3px;

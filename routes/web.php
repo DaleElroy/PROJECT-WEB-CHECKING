@@ -29,6 +29,18 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
-Route::get('/beads',function(){
+Route::get('/customize',function(){
     return view('customize');
+});
+Route::get('log',function(){
+    return view('logged');
+});
+Route::get('cart',function(){
+    return view('cart');
+});
+Route::get('bruh', function(){
+    return view('');
+});
+Route::get('index',function(){
+    return view('navbar');
 });

@@ -1,0 +1,14 @@
+nav{
+    background:linear-gradient(to right,#474e68,#6b72Be ) ;
+   
+}
+img{
+    height: 100px;
+    width: 45px;
+}
+.border{
+    margin-top: 10%;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
