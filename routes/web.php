@@ -44,3 +44,6 @@ Route::get('bruh', function(){
 Route::get('index',function(){
     return view('navbar');
 });
+Route::get('about',function(){
+    return view('about');
+});

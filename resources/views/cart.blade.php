@@ -81,7 +81,7 @@
 </nav>
 	<main class="page" style="margin-top: 10%" >
 	 	<section class="shopping-cart dark">
-	 		<div class="container">
+	 		<div class="container" style="margin-bottom:5%">
 		        <div class="block-heading">
 		          <h2>Shopping Cart</h2>
 		        </div>
@@ -190,7 +190,7 @@
 	 		</div>
 		</section>
 	</main>
-
+	@include('footer')
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
