@@ -130,10 +130,7 @@
                                     <!--<a class="btn btn-primary" href="#"></a> -->
                             </div>
                         </div>
-                        <div class="container mt-4">
-                            <div class="row">
-                                <div class="col-md-3 mb-4">
-                                    <img src="" alt="">
+                        
         </section>
         <section id=shop>
             <div class="container mt-4">

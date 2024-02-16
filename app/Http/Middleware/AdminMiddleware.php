@@ -16,10 +16,10 @@ class AdminMiddleware
 
     public function handle(Request $request, Closure $next)
     {
-        if (auth()->user() && auth()->user()->isAdmin()) {
+        if (Auth()->user()->usertype=='admin'){
             return $next($request);
         }
 
-        return redirect('/home')->with('error', 'Unauthorized access');
+        abort(401);
     }
 }

@@ -9,8 +9,7 @@
             @endif
             <div class="card">
                 <div class="card-header">
-                    <h4>Student List
-                        <a href="{{ url('students/create') }}" class="btn btn-primary float-end">Add Students</a>
+                    <h4>UserList
                     </h4>
                     <div class="card-body">
                         <h5>Total Users: {{ $userCount }}</h5> 

@@ -6,6 +6,7 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Models\Cart;
 
+
 class ProductController extends Controller
 {
     /**
@@ -20,7 +21,7 @@ class ProductController extends Controller
         $products = Product::all()->groupBy('category');
         return view('product', compact('products'));
     }
-
+    
     public function detail($id){
         $products = Product::find($id);
         return view('detail',['product'=>$products]);
@@ -39,6 +40,39 @@ class ProductController extends Controller
         }
         
     }
+    public function toCart(Request $request)
+    {
+        $productId = $request->input('product_id');
+        $productName = $request->input('product_name');
+        $productPrice = $request->input('product_price');
+        $cart = $request->session()->get('cart', []);
+
+       
+        $cart[$productId] = [
+            'name' => $productName,
+            'price' => $productPrice,
+            
+        ];
+
+        
+        $request->session()->put('cart', $cart);
+
+        
+        return redirect()->route('cart')->with('success', 'Product added to cart successfully.');
+    }
+    public function viewCart(Request $request){
+        if($request->session()->has('user'))
+        return view('/login');
+    }
+
+    // DataBackend
+    public function adminData(){
+        $products = Product::all();
+        return view('backend.product.index', compact('products'));
+    }
+     // DataBackend
+
+
     
     
 }

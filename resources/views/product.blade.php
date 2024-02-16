@@ -9,7 +9,6 @@
                             <h1 class="text-center"><span class="category">{{ ucfirst($category) }}</span></h1>
                             <div class="row">
                                 @foreach ($categoryProducts as $product)
-                                    
                                         <div class="card mb-4 g-col-6">
                                             <div class="text-center tumb">
                                                 <img src="{{ asset('images/' . $product->gallery) }}" class="img-fluid"
@@ -30,7 +29,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    
                                 @endforeach
                             </div>
                         </div>
@@ -38,9 +36,8 @@
                 @endforeach
             @endforeach
         </div>
-
     </section>
-   
+    
 
     <style>
         .border{
@@ -70,9 +67,15 @@
 
         .tumb img {
             max-width: 100%;
-            /* Ensure the image doesn't exceed the container's width */
+            
             max-height: 100%;
-            /* Ensure the image doesn't exceed the container's height */
-            /* Ensure the image fits inside the container while maintaining its aspect ratio */
+            
         }
     </style>
+{{-- <form action="{{ route('cart.add') }}" method="POST">
+    @csrf
+    <input type="hidden" name="product_id" value="{{ $product->id }}">
+    <input type="hidden" name="product_name" value="{{ $product->title }}">
+    <input type="hidden" name="product_price" value="{{ $product->price }}">
+    <button type="submit" class="btn btn-primary">Add to Cart</button>
+</form> --}}

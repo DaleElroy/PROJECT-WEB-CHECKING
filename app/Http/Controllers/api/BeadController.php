@@ -31,4 +31,8 @@ class BeadController extends Controller
             return response()->json(['message' => 'No file uploaded'], 400);
         }
     }
+    public function destroy(Bead $bead){
+        $bead->delete();
+
+    }
 }

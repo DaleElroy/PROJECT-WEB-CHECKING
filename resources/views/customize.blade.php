@@ -1,14 +1,12 @@
 @extends('dashboard')
 
-<div class="container mt-4 mb-4">
+<div class="container" style="margin-top: 10%">
     <div class="border p-4 selected-bead-container">
-        <!-- Buttons for clearing and adding to cart -->
-        
     </div>
 </div>
 
 <section id="customize" class="product-section">
-    <div class="container mt-4 mb-4">
+    <div class="container" style="margin-top: 10%">
         <div class="border p-4">
             <div class="row">
                 <!-- Bracelet Product 1 -->
@@ -23,10 +21,14 @@
                     </div>
                 @endforeach
             </div>
-            <button id="clearBtn" class="btn btn-danger mb-2">Clear</button>
+            
+        </div >
+        <div class="btn" style="text-center">
+        <button id="clearBtn" class="btn btn-danger mb-2">Clear</button>
             <button id="addToCartBtn" class="btn btn-success mb-2">Add to Cart</button>
         </div>
     </div>
+    
 </section>
     
 

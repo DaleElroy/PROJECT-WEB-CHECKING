@@ -25,4 +25,9 @@ class UserController extends Controller
         return redirect('/');
        }
     }
+
+    public function delete(User $user){
+        $user->delete();
+        return redirect('backend.user')->with('message','User Delete');
+    }
 }

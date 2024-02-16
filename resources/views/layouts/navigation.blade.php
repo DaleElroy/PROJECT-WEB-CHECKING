@@ -21,7 +21,7 @@
                         <a class="nav-link text-white" href="/" data-after="Home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#shop" data-after="shop">Shop</a>
+                        <a class="nav-link text-white" href="{{route('product')}}" data-after="shop">Shop</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown1" role="button"

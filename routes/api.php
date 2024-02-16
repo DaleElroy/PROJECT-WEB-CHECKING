@@ -58,4 +58,5 @@ Route::delete('latestproduct/{id}',[LatestController::class,'delete']);
 
 Route::get('customize',[BeadController::class,'index']);
 Route::post('customize',[BeadController::class,'store']);
+Route::delete('customize/{id}',[BeadController::class,'delete']);
 

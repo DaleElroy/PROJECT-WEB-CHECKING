@@ -3,6 +3,7 @@
 use App\Http\Controllers\BeadController;
 use App\Http\Controllers\CarouselController;
 use App\Http\Controllers\LatestController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
@@ -27,11 +28,14 @@ Route::get('/', function () {
 });
 Route::get('/',[CarouselController::class,'index'])->name('landing');
 
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
     
 })->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('dashboard',[CarouselController::class,'index'])->name('dashboard');
+
 
 
 Route::middleware('auth')->group(function () {
@@ -67,13 +71,32 @@ Route::get('carousel',[CarouselController::class,'index'])->name('carousel');
 
 Route::get('customize',[BeadController::class,'index'])->name('customize');
 Route::get('latest',[LatestController::class,'index'])->name('latest');
-Route::get('home',[MainController::class,'index'])->name('main');
 Route::post('add_to_cart',[ProductController::class,'addToCart'])->name('addtocart');
 
 
-Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/admin/dashboard', 'AdminController@dashboard')->name('admin.dashboard');
+
+route::get('cart',function(){
+    return view('cart');
 });
 
-Route::get('Admin',[UserController::class,'userData'])->name('backend.index');
-Route::get('adminproduct',[ProductController::class,'index'])->name('backend.product.index');
+
+
+// Route::post('/addcart', [ProductController::class, 'toCart'])->name('cart');
+// Route::get('/cart', [ProductController::class, 'viewCart'])->name('cart');
+
+// Route::post('/carts', [ProductController::class, 'addToCart'])->name('cart.add');
+
+
+// Route::get('home',[LoginController::class,'index'])->middleware('auth')->name('backend.admin');
+// 
+
+// Route::delete('/Admin/{user}',[UserController::class,'destroy'])->name('backend.user');
+
+
+Route::middleware('admin')->group(function(){
+    Route::get('home',[LoginController::class,'admin'])->name('backend.admin');
+    Route::get('adminproduct',[ProductController::class,'adminData'])->name('backend.product.index');
+    Route::get('Admin',[UserController::class,'userData'])->name('backend.user');
+    Route::get('post',[LoginController::class,'post'])->name('backend.dashboard');
+    
+});
